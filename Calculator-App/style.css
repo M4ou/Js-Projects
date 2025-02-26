@@ -36,6 +36,14 @@ form {
     box-shadow: none;
 }
 
+form .top-row {
+    color: #40E0D0;
+}
+
+form .column {
+    color: #D2691E;
+}
+
 form input, button {
     border: none;
     outline: 0;
@@ -44,7 +52,7 @@ form input, button {
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 8px 8px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #F0F8FF;
     cursor: pointer;
     margin: 1.5rem;
