@@ -48,7 +48,7 @@ form input, button {
     border: none;
     outline: 0;
     width: 7vw;
-    height: 6vh;
+    height: 6.5vh;
     border-radius: 10px;
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 8px 8px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
@@ -60,4 +60,28 @@ form input, button {
 
 form .equal {
     width: 20vw;
+}
+
+/* for Mobile */
+@media screen and (max-width: 480px) {
+
+    form {
+        padding: 1rem;
+        width: auto;
+        height: auto;
+    }
+
+    .calc-display {
+        margin: 0.5rem 0 1rem;
+    }
+
+    form input, button {
+        margin: 1.3rem;
+        width: 10vw;
+    }
+
+    form .equal {
+        width: 31vw;
+    }
+
 }
