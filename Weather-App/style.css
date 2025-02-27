@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    width: 100%;
+    background: #000000;
+    background: -webkit-linear-gradient(to right, #434343, #000000);
+    background: linear-gradient(to right, #434343, #000000);
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 20px;
+}
+
+.box {
+    width: 95vw;
+    max-width: 475px;
+    background: #c0c0aa;
+    background: -webkit-linear-gradient(to right, #1cefff, #c0c0aa);
+    background: linear-gradient(to right, #1cefff, #c0c0aa);
+    margin: 20vh auto 0;
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    height: auto;
+}
+
+.search {
+    padding-left: 1.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search input {
+    flex: 1;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1.1rem;
+    background-color: white;
+    height: auto;
+    min-height: 3rem;
+}
+
+.search button {
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.6rem;
+    transition: background-color 0.2s;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search button:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.error {
+    text-align: left;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    display: none;
+}
+
+.weather {
+    display: none;
+}
+
+.weather-icon {
+    padding-top: 2rem;
+    width: 90px;
+    height: auto;
+}
+
+.weather h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 1.5rem 0;
+}
+
+.weather h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: -0.7rem;
+}
+
+.info {
+    margin-top: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    gap: 1rem;
+    flex-wrap: wrap; 
+}
+
+.col {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    flex: 1 1 45%;
+    min-width: 150px; 
+    padding-left: 1rem;
+}
+
+.col img {
+    width: 40px;
+    margin-right: 1rem;
+}
+
+.col .humidity {
+    display: flex;
+    font-weight: 600;
+    padding-bottom: 0.3rem;
+}
+
+.col .wind {
+    display: flex;
+    font-weight: 600;
+    padding-bottom: 0.3rem;
+}
+
+.col p {
+    padding: 0;
+    font-weight: 400;
+    text-align: left;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 12px;
+    }
+
+    .col {
+        min-width: 130px;
+    }
+}
