@@ -9,6 +9,13 @@
     --teritary-: #f9bc60;
 }
 
+.dark-Mode {
+  --background-: #272343;
+  --headline-: #fffffe;
+  --paragraph-: #fffffe;
+  --button-text-: #fffffe;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -53,6 +60,7 @@ nav ul {
 nav ul li {
     padding: 0 0.5rem;
     cursor: pointer;
+    color: var(--paragraph-);
 }
 
 nav ul li:hover {
