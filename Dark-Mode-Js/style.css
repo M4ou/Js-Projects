@@ -320,7 +320,7 @@ nav ul li:hover {
   .svg-img svg {
     width: 330px;
     height: 330px;
-    animation: moveInLeft 5.5s ease infinite;
+    animation: moveInLeft 5s ease infinite;
   }
   .svg-img img {
     position: absolute;
@@ -343,4 +343,51 @@ nav ul li:hover {
     100% {
         transform: rotate(0.05turn);
     }
+  }
+
+  .contact {
+    margin-top: -2rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .contact i {
+    font-size: 2rem;
+    padding-right: 1rem;
+    color: var(--paragraph-);
+  }
+
+  .contact i:hover {
+    color: var(--teritary-);
+    transition: .4s ease;
+  }
+
+  /* for Tablet */
+  @media screen and (max-width: 768px) {
+
+    html {
+      font-size: 14px;
+    }
+
+    .info-section {
+      margin-top: 15rem;
+      column-gap: 2rem;
+    }
+
+    .info {
+      padding-right: 4rem;
+    }
+
+    .svg-img {
+      left: -50px;
+    }
+
+    .contact {
+      margin-top: -4rem;
+    }
+
+    .contact i {
+      font-size: 2.5rem;
+    }
+
   }
