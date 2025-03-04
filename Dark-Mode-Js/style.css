@@ -60,7 +60,6 @@ nav ul li:hover {
     transition: 0.3s ease;
 }
 
-/* From Uiverse.io by Galahhad */ 
 .theme-switch {
     --toggle-size: 12px;
     /* the size is adjusted using font-size,
@@ -265,13 +264,19 @@ nav ul li:hover {
   }
 
   main {
-    /* width: 100vw; */
-    height: 100vh;
+    width: 100vw;
+  }
+
+  .info-section {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    column-gap: 5rem;
+    margin-top: 15%;
+    margin-left: 8%;
   }
 
   .info {
-    margin-top: 15%;
-    margin-left: 8%;
+    padding-right: 11rem;
   }
 
   .info h1 {
@@ -288,4 +293,56 @@ nav ul li:hover {
     font-size: 1.2rem;
     line-height: 1.6;
     color: var(--paragraph-);
+    padding-bottom: 1.5rem;
+  }
+
+  .info button {
+    background-color: var(--background-);
+    color: var(--button-text-);
+    padding: 0.5rem;
+    text-align: center;
+    transition: .6s ease;
+    font-weight: 600;
+  }
+
+  .info button:hover {
+    background-color: var(--button-);
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    
+  }
+
+  .svg-img {
+    position: relative;
+    top: -40px;
+    left: -100px;
+    z-index: 0;
+  }
+
+  .svg-img svg {
+    width: 330px;
+    height: 330px;
+    animation: moveInLeft 5.5s ease infinite;
+  }
+  .svg-img img {
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+  }
+
+  @keyframes moveInLeft {
+    0% {
+        transform: rotate(0.05turn);
+    }
+
+    50% {
+        transform: rotate(-0.05turn);
+    }
+
+    100% {
+        transform: rotate(0.05turn);
+    }
   }
