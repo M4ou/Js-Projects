@@ -307,9 +307,7 @@ nav ul li:hover {
 
   .info button:hover {
     background-color: var(--button-);
-    display: inline-block;
     padding: 0.5rem 1rem;
-    
   }
 
   .svg-img {
