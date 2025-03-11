@@ -43,6 +43,7 @@
     display: flex;
     gap: 20px;
     padding: 10px;
+    scroll-behavior: smooth;
   }
 
   .gallery-container::-webkit-scrollbar {
@@ -52,6 +53,15 @@
   .gallery-container img {
     min-width: 150px;
     object-fit: cover;
+    border-radius: 10px;
+    filter: grayscale(100%);
+  }
+
+  .gallery-container img:hover {
+    filter: grayscale(0);
+    transition: 0.8s;
+    cursor: pointer;
+    transform: scale(1.1);
   }
 
   /* For Tablet */
