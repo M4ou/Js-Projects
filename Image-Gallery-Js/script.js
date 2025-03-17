@@ -1,3 +1,4 @@
+// Horizontal Scroll with Mouse Wheel and Buttons
 const scrollContainer = document.querySelector('.gallery-container');
 const leftBtn = document.querySelector('.scroll-left');
 const rightBtn = document.querySelector('.scroll-right');
