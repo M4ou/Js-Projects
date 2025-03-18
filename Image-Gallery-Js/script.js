@@ -48,12 +48,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }, { passive: true });
     
     scrollContainer.addEventListener('touchend', () => {
-      // Nothing specific needed here
     }, { passive: true });
     
     scrollContainer.addEventListener('touchmove', (e) => {
       const x = e.touches[0].pageX - scrollContainer.offsetLeft;
-      const walk = (x - startX) * 2;
+      const walk = (x - startX) * 0.5;
       scrollContainer.scrollLeft = scrollLeft - walk;
     }, { passive: true });
   });
