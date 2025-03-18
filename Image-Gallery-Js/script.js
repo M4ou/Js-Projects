@@ -56,5 +56,25 @@ document.addEventListener('DOMContentLoaded', function() {
       scrollContainer.scrollLeft = scrollLeft - walk;
     }, { passive: true });
   });
+
 // Lightbox
 let gallery = document.querySelectorAll('.gallery-container .image');
+let lightbox = document.querySelector('.lightbox');
+let lightboxImg = lightbox.querySelector('.img-box img');
+let closeIcon = lightbox.querySelector('.icon');
+
+window.onload = () => {
+    // Handle gallery image clicks
+    gallery.forEach((img) => {
+        img.addEventListener('click', () => {
+            // Get src DIRECTLY from clicked image
+            lightboxImg.src = img.src;
+            lightbox.classList.add('active');
+        });
+    });
+
+    // Handle close button
+    closeIcon.addEventListener('click', () => {
+        lightbox.classList.remove('active');
+    });
+};
