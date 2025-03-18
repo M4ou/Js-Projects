@@ -1,7 +1,6 @@
 const scrollContainer = document.querySelector('.gallery-container');
 const leftBtn = document.querySelector('.scroll-left');
 const rightBtn = document.querySelector('.scroll-right');
-let lightbox = document.querySelector('.lightbox');
 
 // Horizontal Scroll with Mouse Wheel and Buttons
 scrollContainer.addEventListener('wheel', (e) => {
@@ -18,3 +17,4 @@ rightBtn.addEventListener('click', () => {
 })
 
 // Lightbox
+let gallery = document.querySelectorAll('.gallery-container .image');
