@@ -1,17 +1,17 @@
-const scrollContainer = document.querySelector('.gallery-container');
+const gallery = document.querySelector('.gallery-container');
 const leftBtn = document.querySelector('.scroll-left');
 const rightBtn = document.querySelector('.scroll-right');
 
 // Horizontal Scroll with Mouse Wheel and Buttons
-scrollContainer.addEventListener('wheel', (e) => {
+gallery.addEventListener('wheel', (e) => {
     e.preventDefault();
-    scrollContainer.scrollLeft -= e.deltaY;
+    gallery.scrollLeft -= e.deltaY;
 })
 
 leftBtn.addEventListener('click', () => {
-    scrollContainer.scrollLeft -= 150;
+    gallery.scrollLeft -= 150;
 })
 
 rightBtn.addEventListener('click', () => {
-    scrollContainer.scrollLeft += 150;
+    gallery.scrollLeft += 150;
 })
