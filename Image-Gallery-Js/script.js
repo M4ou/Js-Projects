@@ -62,19 +62,58 @@ let gallery = document.querySelectorAll('.gallery-container .image');
 let lightbox = document.querySelector('.lightbox');
 let lightboxImg = lightbox.querySelector('.img-box img');
 let closeIcon = lightbox.querySelector('.icon');
+let currentIndex = 0; // Track current image position
+
+// New elements for navigation
+const prevBtn = lightbox.querySelector('.prev');
+const nextBtn = lightbox.querySelector('.next');
+const currentImgElement = document.querySelector('.current-img');
+const totalImgElement = document.querySelector('.total-img');
+
+// Set total images once
+totalImgElement.textContent = gallery.length;
 
 window.onload = () => {
-    // Handle gallery image clicks
-    gallery.forEach((img) => {
+    gallery.forEach((img, index) => {
         img.addEventListener('click', () => {
-            // Get src DIRECTLY from clicked image
-            lightboxImg.src = img.src;
+            currentIndex = index; // Update current index to clicked image
+            updateLightboxImage();
             lightbox.classList.add('active');
         });
     });
 
-    // Handle close button
+    // Close lightbox
     closeIcon.addEventListener('click', () => {
         lightbox.classList.remove('active');
     });
+
+    // Previous button
+    prevBtn.addEventListener('click', showPrevImage);
+
+    // Next button
+    nextBtn.addEventListener('click', showNextImage);
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('active')) {
+            if (e.key === 'ArrowLeft') showPrevImage();
+            if (e.key === 'ArrowRight') showNextImage();
+            if (e.key === 'Escape') lightbox.classList.remove('active');
+        }
+    });
 };
+
+function updateLightboxImage() {
+    lightboxImg.src = gallery[currentIndex].src;
+    currentImgElement.textContent = currentIndex + 1; // Update counter
+}
+
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % gallery.length; // Wrap around to start
+    updateLightboxImage();
+}
+
+function showPrevImage() {
+    currentIndex = (currentIndex - 1 + gallery.length) % gallery.length; // Wrap around to end
+    updateLightboxImage();
+}
