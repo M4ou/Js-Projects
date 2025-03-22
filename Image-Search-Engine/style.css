@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(117,86,204,1) 0%, rgba(213,105,167,1) 90% );
+    color: #fff;
+}
+
+h1 {
+    text-align: center;
+    margin: 7rem 0 3rem;
+    font-weight: 600;
+}
