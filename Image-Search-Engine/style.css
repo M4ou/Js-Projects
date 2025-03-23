@@ -37,7 +37,8 @@ form input {
     color: #fff;
     font-size: 1.1rem;
     padding: 0 1.5rem;
-    border-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 ::placeholder {
@@ -68,5 +69,20 @@ form button {
     font-size: 1.1rem;
     color: #fff;
     cursor: pointer;
+    border-radius: 10px;
+}
+
+#search-img {
+    width: 80%;
+    margin: 6rem auto 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 2rem;
+}
+
+#search-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
     border-radius: 10px;
 }
