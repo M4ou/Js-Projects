@@ -48,32 +48,16 @@ header a {
     padding: 0 30px;
     display: flex;
     align-items: center;
-    
+    color: black;
 }
 
-header span {
-    color: black;
-    position: relative;
+header a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.5s ease;
 }
 
 header li i {
     color: black;
-}
-
-header span::after {
-    content: '';
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: #000;
-    transform: scaleX(0);
-    /* transform-origin: left; */
-    transition: transform 0.25s ease-out;
-}
-
-header span:hover::after {
-    transform: scaleX(1);
-    transition: transform 0.25s ease-out;
 }
 
 .side-bar {
@@ -99,8 +83,12 @@ header span:hover::after {
     width: 100%;
 }
 
-.side-bar a {
+.side-bar li {
     width: 100%;
+}
+
+.side-bar li:first-child {
+    width: auto;
 }
 
 .menu-btn {
