@@ -5,16 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <body>
     <header>
+        <ul class="side-bar">
+            <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+            <li><a href="#"><span>Blog</span></a></li>
+            <li><a href="#"><span>Products</span></a></li>
+            <li><a href="#"><span>About</span></a></li>
+            <li><a href="#"><span>Forum</span></a></li>
+            <li><a href="#"><span>Login</span></a></li>
+        </ul>
         <ul>
-            <li><a href=""><span>Project</span></a></li>
-            <li><a href=""><span>Blog</span></a></li>
-            <li><a href=""><span>Products</span></a></li>
-            <li><a href=""><span>About</span></a></li>
-            <li><a href=""><span>Forum</span></a></li>
-            <li><a href=""><span>Login</span></a></li>
+            <li><a href="#"><span>E-commerce</span></a></li>
+            <li class="hideOnMobile"><a href="#"><span>Blog</span></a></li>
+            <li class="hideOnMobile"><a href="#"><span>Products</span></a></li>
+            <li class="hideOnMobile"><a href="#"><span>About</span></a></li>
+            <li class="hideOnMobile"><a href="#"><span>Forum</span></a></li>
+            <li class="hideOnMobile"><a href="#"><span>Login</span></a></li>
+            <li class="menu-btn" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
         </ul>
     </header>
 </body>
