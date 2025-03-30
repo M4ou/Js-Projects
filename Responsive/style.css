@@ -56,6 +56,10 @@ header span {
     position: relative;
 }
 
+header li i {
+    color: black;
+}
+
 header span::after {
     content: '';
     display: block;
