@@ -48,4 +48,42 @@
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  ul {
+    margin: 5rem 0;
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   
+  li {
+    padding: 0 15px;
+  }
+
+   ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+  }
+
+  ul span {
+    position: relative;
+  }
+
+  ul span::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform: scaleX(0);
+    /* transform-origin: left; */
+    transition: transform 0.25s ease-out;
+  }
+
+  ul span:hover::after {
+    transform: scaleX(1);
+    transition: transform 0.25s ease-out;
+  }
