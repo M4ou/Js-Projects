@@ -23,6 +23,8 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #212121;
+    z-index: 5;
+    transition: opacity 0.5s ease;
 }
 
 .loader {
