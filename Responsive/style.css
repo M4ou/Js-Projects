@@ -38,10 +38,6 @@ header li:first-child {
     margin-right: auto;
 }
 
-header li:first-child span::after {
-    display: none !important;
-}
-
 header a {
     text-decoration: none;
     height: 100%;
@@ -51,7 +47,13 @@ header a {
     color: black;
 }
 
-header a:hover {
+header ul li:first-child a, 
+header a.logo {
+    background-color: transparent !important;
+    transition: none !important;
+}
+
+header ul li:not(:first-child) a:hover {
     background-color: rgba(0, 0, 0, 0.1);
     transition: background-color 0.5s ease;
 }
@@ -96,7 +98,6 @@ header li i {
 }
 
 @media (max-width: 768px) {
-
     .hideOnMobile {
         display: none;
     }
