@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -13,24 +14,26 @@
         </div>
         <nav class="nav-links">
             <ul>
-                <li><a href="#about"><span class="underline">About</span></a></li>
-                <li><a href="#portfolio"><span class="underline">Portfolio</span></a></li>
-                <li><a href="#projects"><span class="underline">Projects</span></a></li>
+                <li class="hideOnMobile"><a href="#about"><span class="underline">About</span></a></li>
+                <li class="hideOnMobile"><a href="#portfolio"><span class="underline">Portfolio</span></a></li>
+                <li class="hideOnMobile"><a href="#projects"><span class="underline">Projects</span></a></li>
+                <li class="search-bar hideOnMobile">
+                    <input type="text" placeholder="Search..." aria-label="Search">
+                    <button aria-label="Search Button">Search</button>
+                </li>
+                <li class="menu-btn" onclick="showSidebar()"><a href="#"><i class="fa-solid fa-bars"></i></a></li>
+            </ul>
+
+            <ul class="side-bar">
+                <li onclick="hideSidebar()"><a href="#"><i class="fa-solid fa-xmark"></i></a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#projects">Projects</a></li>
                 <li class="search-bar">
                     <input type="text" placeholder="Search..." aria-label="Search">
                     <button aria-label="Search Button">Search</button>
                 </li>
             </ul>
-
-            <!-- <ul class="side-bar">
-                <li><a href="#about"><span class="underline">About</span></a></li>
-                <li><a href="#portfolio"><span class="underline">Portfolio</span></a></li>
-                <li><a href="#projects"><span class="underline">Projects</span></a></li>
-                <li class="search-bar">
-                    <input type="text" placeholder="Search..." aria-label="Search">
-                    <button aria-label="Search Button">Search</button>
-                </li>
-            </ul> -->
         </nav>
     </header>
 </body>
