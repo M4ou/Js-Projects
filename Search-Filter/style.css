@@ -147,37 +147,6 @@ header .underline:hover::after {
     display: none;
 }
 
-@media (max-width: 768px) {
-
-    html {
-        font-size: 14px;
-    }
-
-    .hideOnMobile {
-        display: none;
-    }
-
-    .menu-btn {
-        display: block;
-    
-    }
-}
-
-@media (max-width: 480px) {
-
-    html {
-        font-size: 12px;
-    }
-    
-        .hideOnMobile {
-            display: none;
-        }
-    
-        .menu-btn {
-            display: block;
-        }
-}
-
 main {
     width: 100%;
 }
@@ -268,4 +237,53 @@ main {
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
    }
+
+   @media (max-width: 768px) {
+
+    html {
+        font-size: 14px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        row-gap: 2rem;
+    }
+
+    .card {
+        height: 230px;
+    }
+
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    
+    }
+}
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    .products {
+        grid-template-columns: repeat(auto-fill, minmax(175px, 1fr));
+        row-gap: 1.5rem;
+    }
+
+    .card {
+        height: 190px;
+    }
+    
+    .hideOnMobile {
+        display: none;
+    }
+    
+    .menu-btn {
+        display: block;
+    }
+}
    
