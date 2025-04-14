@@ -65,7 +65,7 @@ header span:hover::after {
     transform-origin: bottom center;
 }
 
-section {
+.Hero {
     display: flex;
     padding-top: 5rem;
     height: 50vh;
