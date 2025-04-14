@@ -68,7 +68,7 @@ header span:hover::after {
 section {
     display: flex;
     padding-top: 5rem;
-    height: 40vh;
+    height: 50vh;
 }
 
 .heroText{
